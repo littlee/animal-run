@@ -120,20 +120,21 @@ var Main = (function (_super) {
      * Create scene interface
      */
     Main.prototype.startCreateScene = function () {
-        var _this = this;
-        var loadingView = new LoadingView();
-        this.addChild(loadingView);
+        // let loadingView = new LoadingView()
+        // this.addChild(loadingView)
         // fake preload
-        var timer = new egret.Timer(2000, 1);
-        timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, function () {
-            _this.removeChild(loadingView);
-            var startView = new StartView();
-            _this.addChild(startView);
-            startView.onClickRoom(function () {
-                console.log('gg');
-            });
-        }, this);
-        timer.start();
+        // var timer:egret.Timer = new egret.Timer(2000, 1)
+        // timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, () => {
+        //     this.removeChild(loadingView)
+        //     let startView = new StartView()
+        //     this.addChild(startView)
+        //     startView.onClickRoom(() => {
+        //         console.log('gg')
+        //     })
+        // }, this)
+        // timer.start()
+        var gameView = new GameView();
+        this.addChild(gameView);
     };
     Main.prototype.createBitmapByName = function (name) {
         var result = new egret.Bitmap();

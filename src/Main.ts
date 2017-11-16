@@ -114,21 +114,24 @@ class Main extends eui.UILayer {
      */
     protected startCreateScene(): void {
 
-        let loadingView = new LoadingView()
-        this.addChild(loadingView)
+        // let loadingView = new LoadingView()
+        // this.addChild(loadingView)
 
         // fake preload
-        var timer:egret.Timer = new egret.Timer(2000, 1)
-        timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, () => {
-            this.removeChild(loadingView)
+        // var timer:egret.Timer = new egret.Timer(2000, 1)
+        // timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, () => {
+        //     this.removeChild(loadingView)
             
-            let startView = new StartView()
-            this.addChild(startView)
-            startView.onClickRoom(() => {
-                console.log('gg')
-            })
-        }, this)
-        timer.start()
+        //     let startView = new StartView()
+        //     this.addChild(startView)
+        //     startView.onClickRoom(() => {
+        //         console.log('gg')
+        //     })
+        // }, this)
+        // timer.start()
+
+        let gameView = new GameView()
+        this.addChild(gameView)
     }
 
     private createBitmapByName(name: string): egret.Bitmap {
