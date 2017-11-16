@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Image width="100%" height="100%" source="start_bg_jpg" />
+    <e:Image id="room" anchorOffsetX="0" anchorOffsetY="0" source="start_room_png" verticalCenter="0" horizontalCenter="0" />
+	<e:Image source="start_bottom_bar_png" anchorOffsetX="0" anchorOffsetY="0" bottom="0" horizontalCenter="0"/>
+	<e:Image source="start_logo_png" anchorOffsetX="0" anchorOffsetY="0" bottom="40" horizontalCenter="0"/>
+</e:Skin>

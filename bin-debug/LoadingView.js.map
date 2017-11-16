@@ -1,0 +1,1 @@
+{"version":3,"file":"LoadingView.js","sourceRoot":"","sources":["../src/LoadingView.ts"],"names":[],"mappings":";;;;;;;;;;;;;AAAA;IAA0B,+BAAa;IACnC;QAAA,YACI,iBAAO,SAEV;QADG,KAAI,CAAC,QAAQ,GAAG,iCAAiC,CAAA;;IACrD,CAAC;IAIM,qCAAe,GAAtB;QACI,IAAI,CAAC,OAAO,CAAC,IAAI,EAAE,CAAA;IAC1B,CAAC;IACF,kBAAC;AAAD,CAAC,AAXD,CAA0B,GAAG,CAAC,SAAS,GAWtC;AAXK,UAAA,WAAW,0BAWhB,CAAA"}
