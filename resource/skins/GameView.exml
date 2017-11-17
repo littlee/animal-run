@@ -1,3 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+<e:Skin width="960" height="640" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+    <e:Image source="game_map_png" bottom="0" right="0"/>
+    <e:Image source="game_bet_panel_png" horizontalCenter="0" bottom="0"/>
+    <e:Image source="game_rebet_png" left="7" bottom="68"/>
+    <e:Image source="game_cancel_png" left="7" bottom="6"/>
+    <e:Image source="game_bet_minus_png" bottom="17" right="87"/>
+    <e:Image source="game_bet_plus_png" bottom="17" right="17"/>
+    <e:Image source="game_bet_amount_png" right="19" bottom="90" />
+
+
+    <e:Rect width="100%" height="64" fillColor="0x000000" fillAlpha="0.5"/>
+    <e:Image source="game_lobby_png"  right="10" top="5"/>
+    <e:Image source="game_coin_holder_png" top="4" left="10"/>
+    <e:Image source="game_coin_png" top="4" left="10"/>
+    <e:Label text="123" y="20" x="70"/>
+    
+	<e:Image source="game_c1_png" bottom="-3" left="146"/>
+	<e:Image source="game_c2_png" bottom="-3" left="256"/>
+	<e:Image source="game_c3_png" bottom="-3" left="366"/>
+	<e:Image source="game_c4_png" bottom="-3" left="475"/>
+	<e:Image source="game_c5_png" bottom="-3" left="583"/>
+	<e:Image source="game_c6_png" bottom="-3" left="691"/>
+
+    <e:Image source="game_bet_each_png" bottom="92" left="143"/>
+	<e:Image source="game_bet_each_png" bottom="92" left="253"/>
+	<e:Image source="game_bet_each_png" bottom="92" left="363"/>
+	<e:Image source="game_bet_each_png" bottom="92" left="473"/>
+	<e:Image source="game_bet_each_png" bottom="92" left="583"/>
+	<e:Image source="game_bet_each_png" bottom="92" left="693"/>
 </e:Skin>
