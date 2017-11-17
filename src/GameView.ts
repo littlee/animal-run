@@ -7,8 +7,15 @@ class GameView extends eui.Component {
     private c1:eui.Image
 
     public childrenCreated(){
-        // console.log(this.c1)
-        this.c1.source = 'game_c1_active_png'
+        var mcData = RES.getRes('ani_c1_json')
+        var mcTexture = RES.getRes('ani_c1_png')
+        var mcDataFactory = new egret.MovieClipDataFactory(mcData, mcTexture)
+        var role:egret.MovieClip = new egret.MovieClip(mcDataFactory.generateMovieClipData('run'))
+        this.addChild(role)
+        role.gotoAndPlay(1, 5)
+        role.x = 100
+        role.y = 100
+        
 	}
 
 }

@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,description_json,loading_bg_jpg,loading_spin_png,start_bg_jpg,start_bottom_bar_png,start_logo_png,start_room_png,game_lane_jpg,game_lobby_png,game_bet_panel_png,game_rebet_png,game_cancel_png,game_line_start_png,game_line_over_png,game_bet_minus_png,game_bet_plus_png,game_c1_png,game_c1_active_png,game_c2_active_png,game_c2_png,game_c3_active_png,game_c3_png,game_c4_active_png,game_c4_png,game_c5_active_png,game_c5_png,game_c6_active_png,game_c6_png,game_c2_history_png,game_c5_history_png,game_c3_history_png,game_c4_history_png,game_c6_history_png,game_c1_history_png,game_map_png,game_bet_amount_png,game_coin_png,game_coin_holder_png,game_bet_each_png",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,description_json,loading_bg_jpg,loading_spin_png,start_bg_jpg,start_bottom_bar_png,start_logo_png,start_room_png,game_lobby_png,game_bet_panel_png,game_rebet_png,game_cancel_png,game_bet_minus_png,game_bet_plus_png,game_c1_png,game_c1_active_png,game_c2_active_png,game_c2_png,game_c3_active_png,game_c3_png,game_c4_active_png,game_c4_png,game_c5_active_png,game_c5_png,game_c6_active_png,game_c6_png,game_c2_history_png,game_c5_history_png,game_c3_history_png,game_c4_history_png,game_c6_history_png,game_c1_history_png,game_map_png,game_bet_amount_png,game_coin_png,game_coin_holder_png,game_bet_each_png,ani_c1_json,ani_c1_png",
 			"name": "preload"
 		}
 	],
@@ -122,199 +122,194 @@
 			"name": "track_sb_png"
 		},
 		{
-			"name": "description_json",
+			"url": "config/description.json",
 			"type": "json",
-			"url": "config/description.json"
+			"name": "description_json"
 		},
 		{
-			"name": "loading_bg_jpg",
+			"url": "assets/loading_bg.jpg",
 			"type": "image",
-			"url": "assets/loading_bg.jpg"
+			"name": "loading_bg_jpg"
 		},
 		{
-			"name": "loading_spin_png",
+			"url": "assets/loading_spin.png",
 			"type": "image",
-			"url": "assets/loading_spin.png"
+			"name": "loading_spin_png"
 		},
 		{
-			"name": "start_bg_jpg",
+			"url": "assets/start_bg.jpg",
 			"type": "image",
-			"url": "assets/start_bg.jpg"
+			"name": "start_bg_jpg"
 		},
 		{
-			"name": "start_bottom_bar_png",
+			"url": "assets/start_bottom_bar.png",
 			"type": "image",
-			"url": "assets/start_bottom_bar.png"
+			"name": "start_bottom_bar_png"
 		},
 		{
-			"name": "start_logo_png",
+			"url": "assets/start_logo.png",
 			"type": "image",
-			"url": "assets/start_logo.png"
+			"name": "start_logo_png"
 		},
 		{
-			"name": "start_room_png",
+			"url": "assets/start_room.png",
 			"type": "image",
-			"url": "assets/start_room.png"
+			"name": "start_room_png"
 		},
 		{
-			"name": "game_lane_jpg",
+			"url": "assets/game_lobby.png",
 			"type": "image",
-			"url": "assets/game_lane.jpg"
+			"name": "game_lobby_png"
 		},
 		{
-			"name": "game_lobby_png",
+			"url": "assets/game_bet_panel.png",
 			"type": "image",
-			"url": "assets/game_lobby.png"
+			"name": "game_bet_panel_png"
 		},
 		{
-			"name": "game_bet_panel_png",
+			"url": "assets/game_rebet.png",
 			"type": "image",
-			"url": "assets/game_bet_panel.png"
+			"name": "game_rebet_png"
 		},
 		{
-			"name": "game_rebet_png",
+			"url": "assets/game_cancel.png",
 			"type": "image",
-			"url": "assets/game_rebet.png"
+			"name": "game_cancel_png"
 		},
 		{
-			"name": "game_cancel_png",
+			"url": "assets/game_bet_minus.png",
 			"type": "image",
-			"url": "assets/game_cancel.png"
+			"name": "game_bet_minus_png"
 		},
 		{
-			"name": "game_line_start_png",
+			"url": "assets/game_bet_plus.png",
 			"type": "image",
-			"url": "assets/game_line_start.png"
+			"name": "game_bet_plus_png"
 		},
 		{
-			"name": "game_line_over_png",
+			"url": "assets/game_c1.png",
 			"type": "image",
-			"url": "assets/game_line_over.png"
+			"name": "game_c1_png"
 		},
 		{
-			"name": "game_bet_minus_png",
+			"url": "assets/game_c1_active.png",
 			"type": "image",
-			"url": "assets/game_bet_minus.png"
+			"name": "game_c1_active_png"
 		},
 		{
-			"name": "game_bet_plus_png",
+			"url": "assets/game_c2_active.png",
 			"type": "image",
-			"url": "assets/game_bet_plus.png"
+			"name": "game_c2_active_png"
 		},
 		{
-			"name": "game_c1_png",
+			"url": "assets/game_c2.png",
 			"type": "image",
-			"url": "assets/game_c1.png"
+			"name": "game_c2_png"
 		},
 		{
-			"name": "game_c1_active_png",
+			"url": "assets/game_c3_active.png",
 			"type": "image",
-			"url": "assets/game_c1_active.png"
+			"name": "game_c3_active_png"
 		},
 		{
-			"name": "game_c2_active_png",
+			"url": "assets/game_c3.png",
 			"type": "image",
-			"url": "assets/game_c2_active.png"
+			"name": "game_c3_png"
 		},
 		{
-			"name": "game_c2_png",
+			"url": "assets/game_c4_active.png",
 			"type": "image",
-			"url": "assets/game_c2.png"
+			"name": "game_c4_active_png"
 		},
 		{
-			"name": "game_c3_active_png",
+			"url": "assets/game_c4.png",
 			"type": "image",
-			"url": "assets/game_c3_active.png"
+			"name": "game_c4_png"
 		},
 		{
-			"name": "game_c3_png",
+			"url": "assets/game_c5_active.png",
 			"type": "image",
-			"url": "assets/game_c3.png"
+			"name": "game_c5_active_png"
 		},
 		{
-			"name": "game_c4_active_png",
+			"url": "assets/game_c5.png",
 			"type": "image",
-			"url": "assets/game_c4_active.png"
+			"name": "game_c5_png"
 		},
 		{
-			"name": "game_c4_png",
+			"url": "assets/game_c6_active.png",
 			"type": "image",
-			"url": "assets/game_c4.png"
+			"name": "game_c6_active_png"
 		},
 		{
-			"name": "game_c5_active_png",
+			"url": "assets/game_c6.png",
 			"type": "image",
-			"url": "assets/game_c5_active.png"
+			"name": "game_c6_png"
 		},
 		{
-			"name": "game_c5_png",
+			"url": "assets/game_c2_history.png",
 			"type": "image",
-			"url": "assets/game_c5.png"
+			"name": "game_c2_history_png"
 		},
 		{
-			"name": "game_c6_active_png",
+			"url": "assets/game_c5_history.png",
 			"type": "image",
-			"url": "assets/game_c6_active.png"
+			"name": "game_c5_history_png"
 		},
 		{
-			"name": "game_c6_png",
+			"url": "assets/game_c3_history.png",
 			"type": "image",
-			"url": "assets/game_c6.png"
+			"name": "game_c3_history_png"
 		},
 		{
-			"name": "game_c2_history_png",
+			"url": "assets/game_c4_history.png",
 			"type": "image",
-			"url": "assets/game_c2_history.png"
+			"name": "game_c4_history_png"
 		},
 		{
-			"name": "game_c5_history_png",
+			"url": "assets/game_c6_history.png",
 			"type": "image",
-			"url": "assets/game_c5_history.png"
+			"name": "game_c6_history_png"
 		},
 		{
-			"name": "game_c3_history_png",
+			"url": "assets/game_c1_history.png",
 			"type": "image",
-			"url": "assets/game_c3_history.png"
+			"name": "game_c1_history_png"
 		},
 		{
-			"name": "game_c4_history_png",
+			"url": "assets/game_map.png",
 			"type": "image",
-			"url": "assets/game_c4_history.png"
+			"name": "game_map_png"
 		},
 		{
-			"name": "game_c6_history_png",
+			"url": "assets/game_bet_amount.png",
 			"type": "image",
-			"url": "assets/game_c6_history.png"
+			"name": "game_bet_amount_png"
 		},
 		{
-			"name": "game_c1_history_png",
+			"url": "assets/game_coin.png",
 			"type": "image",
-			"url": "assets/game_c1_history.png"
+			"name": "game_coin_png"
 		},
 		{
-			"name": "game_map_png",
+			"url": "assets/game_coin_holder.png",
 			"type": "image",
-			"url": "assets/game_map.png"
+			"name": "game_coin_holder_png"
 		},
 		{
-			"name": "game_bet_amount_png",
+			"url": "assets/game_bet_each.png",
 			"type": "image",
-			"url": "assets/game_bet_amount.png"
+			"name": "game_bet_each_png"
 		},
 		{
-			"name": "game_coin_png",
-			"type": "image",
-			"url": "assets/game_coin.png"
+			"url": "assets/ani_c1/c1.json",
+			"type": "json",
+			"name": "ani_c1_json"
 		},
 		{
-			"name": "game_coin_holder_png",
+			"url": "assets/ani_c1/c1.png",
 			"type": "image",
-			"url": "assets/game_coin_holder.png"
-		},
-		{
-			"name": "game_bet_each_png",
-			"type": "image",
-			"url": "assets/game_bet_each.png"
+			"name": "ani_c1_png"
 		}
 	]
 }

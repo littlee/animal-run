@@ -1,6 +1,6 @@
 {
 	"mc": {
-		"ani_c1": {
+		"run": {
 			"frameRate": 24,
 			"labels": [
 				{
@@ -9,7 +9,12 @@
 					"end": 13
 				}
 			],
-			"events": [],
+			"events": [
+				{
+                    "name": "@fall",
+                    "frame": 6
+                }
+			],
 			"frames": [
 				{
 					"res": "shizi0",
@@ -79,6 +84,7 @@
 			]
 		}
 	},
+	"file": "ani_c1_png",
 	"res": {
 		"shizi4": {
 			"x": 139,
