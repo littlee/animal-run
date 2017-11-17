@@ -19,15 +19,8 @@ var GameView = (function (_super) {
         return _this;
     }
     GameView.prototype.childrenCreated = function () {
-        this.bg = new eui.Image();
-        this.bg.source = 'resource/assets/game_lane.jpg';
-        this.bg.x = 0;
-        this.bg.y = 0;
-        this.bg.width = this.stage.stageWidth * 2;
-        this.addChild(this.bg);
-        this.bg.addEventListener('touchTap', function () {
-            this.bg.x += 10;
-        }, this);
+        // console.log(this.c1)
+        this.c1.source = 'game_c1_active_png';
     };
     return GameView;
 }(eui.Component));

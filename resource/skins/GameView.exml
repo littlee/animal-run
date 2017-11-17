@@ -15,12 +15,18 @@
     <e:Image source="game_coin_png" top="4" left="10"/>
     <e:Label text="123" y="20" x="70"/>
     
-	<e:Image source="game_c1_png" bottom="-3" left="146"/>
+	<e:Image source="game_c1_png" bottom="-3" left="146" id="c1"/>
+    <e:Label text="x15" bottom="10" left="178" size="20"/>
 	<e:Image source="game_c2_png" bottom="-3" left="256"/>
+	<e:Label text="x10" bottom="10" left="288" size="20"/>
 	<e:Image source="game_c3_png" bottom="-3" left="366"/>
+	<e:Label text="x6" bottom="10" left="404" size="20"/>
 	<e:Image source="game_c4_png" bottom="-3" left="475"/>
+	<e:Label text="x6" bottom="10" left="513" size="20"/>
 	<e:Image source="game_c5_png" bottom="-3" left="583"/>
+	<e:Label text="x4" bottom="10" left="621" size="20"/>
 	<e:Image source="game_c6_png" bottom="-3" left="691"/>
+	<e:Label text="x4" bottom="10" left="729" size="20"/>
 
     <e:Image source="game_bet_each_png" bottom="92" left="143"/>
 	<e:Image source="game_bet_each_png" bottom="92" left="253"/>
