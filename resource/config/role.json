@@ -1,0 +1,44 @@
+[
+    {
+        "name": "shizi",
+        "data": "ani_c1_json",
+        "texture": "ani_c1_png",
+        "x": 0,
+        "y": 113
+    },
+    {
+        "name": "houzi",
+        "data": "ani_c2_json",
+        "texture": "ani_c2_png",
+        "x": 0,
+        "y": 148
+    },
+    {
+        "name": "banma",
+        "data": "ani_c3_json",
+        "texture": "ani_c3_png",
+        "x": 0,
+        "y": 203
+    },
+    {
+        "name": "luotuo",
+        "data": "ani_c4_json",
+        "texture": "ani_c4_png",
+        "x": 0,
+        "y": 254
+    },
+    {
+        "name": "tuoniao",
+        "data": "ani_c5_json",
+        "texture": "ani_c5_png",
+        "x": 0,
+        "y": 320
+    },
+    {
+        "name": "yezhu",
+        "data": "ani_c6_json",
+        "texture": "ani_c6_png",
+        "right": 0,
+        "y": 410
+    }
+]

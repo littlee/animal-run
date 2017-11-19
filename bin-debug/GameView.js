@@ -15,18 +15,24 @@ var GameView = (function (_super) {
     __extends(GameView, _super);
     function GameView() {
         var _this = _super.call(this) || this;
+        _this.roles = [];
         _this.skinName = 'resource/skins/GameView.exml';
         return _this;
     }
     GameView.prototype.childrenCreated = function () {
-        var mcData = RES.getRes('ani_c1_json');
-        var mcTexture = RES.getRes('ani_c1_png');
-        var mcDataFactory = new egret.MovieClipDataFactory(mcData, mcTexture);
-        var role = new egret.MovieClip(mcDataFactory.generateMovieClipData('run'));
-        this.addChild(role);
-        role.gotoAndPlay(1, 5);
-        role.x = 100;
-        role.y = 100;
+        var _this = this;
+        console.log(this.stage.stageWidth);
+        var roleConfig = RES.getRes('role_json');
+        roleConfig.forEach(function (item, index) {
+            var mcData = RES.getRes(item.data);
+            var mcTexture = RES.getRes(item.texture);
+            var mcFactory = new egret.MovieClipDataFactory(mcData, mcTexture);
+            _this.roles[index] = new egret.MovieClip(mcFactory.generateMovieClipData('run'));
+            _this.roles[index].x = _this.stage.stageWidth - _this.roles[index].width - 20;
+            _this.roles[index].y = item.y;
+            _this.roles[index].gotoAndPlay(1, -1);
+            _this.addChild(_this.roles[index]);
+        });
     };
     return GameView;
 }(eui.Component));

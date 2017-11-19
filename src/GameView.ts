@@ -4,18 +4,22 @@ class GameView extends eui.Component {
         this.skinName = 'resource/skins/GameView.exml'
     }
 
-    private c1:eui.Image
 
-    public childrenCreated(){
-        var mcData = RES.getRes('ani_c1_json')
-        var mcTexture = RES.getRes('ani_c1_png')
-        var mcDataFactory = new egret.MovieClipDataFactory(mcData, mcTexture)
-        var role:egret.MovieClip = new egret.MovieClip(mcDataFactory.generateMovieClipData('run'))
-        this.addChild(role)
-        role.gotoAndPlay(1, 5)
-        role.x = 100
-        role.y = 100
-        
-	}
+    private roles: egret.MovieClip[] = []
+
+    public childrenCreated() {
+        console.log(this.stage.stageWidth)
+        var roleConfig = RES.getRes('role_json')
+        roleConfig.forEach((item, index) => {
+            var mcData = RES.getRes(item.data)
+            var mcTexture = RES.getRes(item.texture)
+            var mcFactory = new egret.MovieClipDataFactory(mcData, mcTexture)
+            this.roles[index] = new egret.MovieClip(mcFactory.generateMovieClipData('run'))
+            this.roles[index].x = this.stage.stageWidth - this.roles[index].width - 20
+            this.roles[index].y = item.y
+            this.roles[index].gotoAndPlay(1, -1)
+            this.addChild(this.roles[index])
+        })
+    }
 
 }
