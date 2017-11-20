@@ -23,36 +23,42 @@ var betBtnListConfig = [
     {
         name: 'shizi',
         times: 'x15',
+        resource: 'game_c1_png',
         default: 'game_c1_png',
         active: 'game_c1_active_png'
     },
     {
         name: 'houzi',
         times: 'x10',
+        resource: 'game_c2_png',
         default: 'game_c2_png',
         active: 'game_c2_active_png'
     },
     {
         name: 'banma',
         times: 'x6',
+        resource: 'game_c3_png',
         default: 'game_c3_png',
         active: 'game_c3_active_png'
     },
     {
         name: 'luotuo',
         times: 'x6',
+        resource: 'game_c4_png',
         default: 'game_c4_png',
         active: 'game_c4_active_png'
     },
     {
         name: 'tuoniao',
         times: 'x4',
+        resource: 'game_c5_png',
         default: 'game_c5_png',
         active: 'game_c5_active_png'
     },
     {
         name: 'yezhu',
         times: 'x4',
+        resource: 'game_c6_png',
         default: 'game_c6_png',
         active: 'game_c6_active_png'
     }
@@ -90,12 +96,16 @@ var GameView = (function (_super) {
         }));
         this.betBtnList.dataProvider = betBtnCollection;
         this.betBtnList.addEventListener('touchTap', function (e) {
-            console.log(typeof e.target.name);
             if (e.target.name) {
                 var index = parseInt(e.target.name);
                 var collItem = betBtnCollection.getItemAt(index);
-                betBtnCollection.replaceItemAt(__assign({}, collItem, { state: 'active' }), index);
+                betBtnCollection.replaceItemAt(__assign({}, collItem, { amount: collItem.amount + parseInt(this.betCoin.text) }), index);
             }
+        }, this);
+        this.startBtn.addEventListener('touchTap', function () {
+            // var timer:egret.Timer = new egret.Timer(500, 0)
+            // timer.addEventListener(egret.TimerEvent.TIMER,this.timerFunc,this)
+            // timer.start()
         }, this);
     };
     return GameView;

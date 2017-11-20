@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin width="960" height="640" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-    <e:Image source="game_map_png" bottom="0" right="0" />
+    <e:Image id="gameMap" source="game_map_png" bottom="0" right="0" />
     <e:Image source="game_bet_panel_png" horizontalCenter="0" bottom="0" />
     <e:Image source="game_rebet_png" left="7" bottom="68" />
     <e:Image source="game_cancel_png" left="7" bottom="6" />
@@ -12,16 +12,15 @@
     <e:Image source="game_coin_holder_png" top="4" left="10" />
     <e:Image source="game_coin_png" top="4" left="10" />
     <e:Label id="totalCoin" text="123" y="20" x="70" />
-    <e:Label id="betCoin" text="123" bottom="98" right="44" size="24"/>
+    <e:Label id="betCoin" text="100" bottom="98" right="44" size="24"/>
     <e:List id="betBtnList" x="149.34" y="506.17" width="642.66" height="130.67" anchorOffsetX="0" anchorOffsetY="0">
         <e:itemRendererSkinName>
-            <e:Skin states="default,active" currentState="{data.state}">
+            <e:Skin >
                 <e:Group>
                     <e:Image source="game_bet_each_png" />
                     <e:Label text="{data.amount}" horizontalCenter="0" y="5" />
-                    <e:Image source="{data.default}" includeIn="default" y="38" horizontalCenter="0" name="{data.index}"/>
-                    <e:Image source="{data.active}" includeIn="active" y="38" horizontalCenter="0" name="{data.index}"/>
-                    <e:Label text="{data.times}" horizontalCenter="0" bottom="15" size="20"  touchEnabled="false"/>
+                    <e:Image source="{data.resource}" y="38" horizontalCenter="0" name="{data.index}"/>
+                    <e:Label text="{data.times}" horizontalCenter="0" bottom="15" size="20" touchEnabled="false"/>
                 </e:Group>
             </e:Skin>
         </e:itemRendererSkinName>
@@ -29,4 +28,5 @@
             <e:HorizontalLayout/>
         </e:layout>
     </e:List>
+    <e:Image id="startBtn" source="game_start_btn_png" horizontalCenter="0" verticalCenter="0"/>
 </e:Skin>
