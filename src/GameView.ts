@@ -53,6 +53,10 @@ function mapWithIndex(arr, merge) {
     })
 }
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
 class GameView extends eui.Component {
     public constructor() {
         super()
@@ -60,14 +64,34 @@ class GameView extends eui.Component {
     }
 
     private roles: egret.MovieClip[] = []
+    private rolesTimer: egret.Timer
     private betBtnList: eui.List
     private totalCoin: eui.Label
     private betCoin: eui.Label
     private startBtn: eui.Image
     private gameMap: eui.Image
+    private gameMapTw: egret.tween.TweenGroup
 
     public childrenCreated() {
         super.createChildren()
+
+        this.initRoles()
+        this.initBetBtns()
+
+
+        this.startBtn.addEventListener('touchTap', function () {
+            this.gameMapTw.play()
+            this.roles.forEach((item) => {
+                item.gotoAndPlay(1, -1)
+            })
+
+            this.rolesTimer = new egret.Timer(1000, -1)
+            this.rolesTimer.addEventListener('timer', this.rolesDash, this)
+            this.rolesTimer.start()
+        }, this)
+    }
+
+    private initRoles(): void {
         var roleConfig = RES.getRes('role_json')
         roleConfig.forEach((item, index) => {
             var mcData = RES.getRes(item.data)
@@ -76,16 +100,17 @@ class GameView extends eui.Component {
             this.roles[index] = new egret.MovieClip(mcFactory.generateMovieClipData('run'))
             this.roles[index].x = item.x
             this.roles[index].y = item.y
-            // this.roles[index].gotoAndPlay(1, -1)
             this.addChild(this.roles[index])
         })
+    }
 
+    private initBetBtns(): void {
         let betBtnCollection = new eui.ArrayCollection(mapWithIndex(betBtnListConfig, {
             amount: 0,
             state: 'default'
         }))
         this.betBtnList.dataProvider = betBtnCollection
-        this.betBtnList.addEventListener('touchTap', function(e) {
+        this.betBtnList.addEventListener('touchTap', function (e) {
             if (e.target.name) {
                 var index = parseInt(e.target.name)
                 var collItem = betBtnCollection.getItemAt(index)
@@ -95,12 +120,44 @@ class GameView extends eui.Component {
                 }, index)
             }
         }, this)
+    }
 
-        this.startBtn.addEventListener('touchTap', function() {
-            // var timer:egret.Timer = new egret.Timer(500, 0)
-            // timer.addEventListener(egret.TimerEvent.TIMER,this.timerFunc,this)
-            // timer.start()
+    private rolesDash(): void {
+        this.roles.forEach(function (item, index) {
+            var tw = egret.Tween.get(item)
+            tw.to({
+                x: item.x - getRandomInt(0, 300)
+            }, 1000).call(function () {
+                this.onRoleTwComplete(index)
+            }, this)
         }, this)
+        this.rolesTimer.stop()
+    }
+
+    private onRoleTwComplete(index: number): void {
+        // only want to call once
+        if (index !== 0) {
+            return
+        }
+        var hasWin = false
+        var winX = []
+        this.roles.forEach(function (item) {
+            if (item.x < 150) {
+                hasWin = true
+            }
+            winX.push(item.x)
+        })
+        if (hasWin) {
+            var minWinX = Math.min.apply(null, winX)
+            console.log(winX.indexOf(minWinX))
+        }
+        else {
+            egret.setTimeout(function () {
+                if (!this.rolesTimer.running) {
+                    this.rolesTimer.start()
+                }
+            }, this, 1000)
+        }
     }
 
 }

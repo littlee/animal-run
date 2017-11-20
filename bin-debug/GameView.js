@@ -68,6 +68,9 @@ function mapWithIndex(arr, merge) {
         return __assign({}, item, merge, { index: "" + index });
     });
 }
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 var GameView = (function (_super) {
     __extends(GameView, _super);
     function GameView() {
@@ -77,8 +80,21 @@ var GameView = (function (_super) {
         return _this;
     }
     GameView.prototype.childrenCreated = function () {
-        var _this = this;
         _super.prototype.createChildren.call(this);
+        this.initRoles();
+        this.initBetBtns();
+        this.startBtn.addEventListener('touchTap', function () {
+            this.gameMapTw.play();
+            this.roles.forEach(function (item) {
+                item.gotoAndPlay(1, -1);
+            });
+            this.rolesTimer = new egret.Timer(1000, -1);
+            this.rolesTimer.addEventListener('timer', this.rolesDash, this);
+            this.rolesTimer.start();
+        }, this);
+    };
+    GameView.prototype.initRoles = function () {
+        var _this = this;
         var roleConfig = RES.getRes('role_json');
         roleConfig.forEach(function (item, index) {
             var mcData = RES.getRes(item.data);
@@ -87,9 +103,10 @@ var GameView = (function (_super) {
             _this.roles[index] = new egret.MovieClip(mcFactory.generateMovieClipData('run'));
             _this.roles[index].x = item.x;
             _this.roles[index].y = item.y;
-            // this.roles[index].gotoAndPlay(1, -1)
             _this.addChild(_this.roles[index]);
         });
+    };
+    GameView.prototype.initBetBtns = function () {
         var betBtnCollection = new eui.ArrayCollection(mapWithIndex(betBtnListConfig, {
             amount: 0,
             state: 'default'
@@ -102,11 +119,42 @@ var GameView = (function (_super) {
                 betBtnCollection.replaceItemAt(__assign({}, collItem, { amount: collItem.amount + parseInt(this.betCoin.text) }), index);
             }
         }, this);
-        this.startBtn.addEventListener('touchTap', function () {
-            // var timer:egret.Timer = new egret.Timer(500, 0)
-            // timer.addEventListener(egret.TimerEvent.TIMER,this.timerFunc,this)
-            // timer.start()
+    };
+    GameView.prototype.rolesDash = function () {
+        this.roles.forEach(function (item, index) {
+            var tw = egret.Tween.get(item);
+            tw.to({
+                x: item.x - getRandomInt(0, 300)
+            }, 1000).call(function () {
+                this.onRoleTwComplete(index);
+            }, this);
         }, this);
+        this.rolesTimer.stop();
+    };
+    GameView.prototype.onRoleTwComplete = function (index) {
+        // only want to call once
+        if (index !== 0) {
+            return;
+        }
+        var hasWin = false;
+        var winX = [];
+        this.roles.forEach(function (item) {
+            if (item.x < 150) {
+                hasWin = true;
+            }
+            winX.push(item.x);
+        });
+        if (hasWin) {
+            var minWinX = Math.min.apply(null, winX);
+            console.log(winX.indexOf(minWinX));
+        }
+        else {
+            egret.setTimeout(function () {
+                if (!this.rolesTimer.running) {
+                    this.rolesTimer.start();
+                }
+            }, this, 1000);
+        }
     };
     return GameView;
 }(eui.Component));

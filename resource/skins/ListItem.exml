@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-    <e:Group x="{data.x}" y="{data.y}">
-        <e:Image source="game_bet_each_png"/>
-        <e:Label text="0" horizontalCenter="0" y="5"/>
-        <e:Image source="game_c1_png" y="38" horizontalCenter="0"/>
-        <e:Label text="x15" horizontalCenter="0" bottom="15" size="20"/>
-    </e:Group>
-</e:Skin>

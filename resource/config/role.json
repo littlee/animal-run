@@ -4,41 +4,41 @@
         "data": "ani_c1_json",
         "texture": "ani_c1_png",
         "x": 810,
-        "y": 84
+        "y": 105
     },
     {
         "name": "houzi",
         "data": "ani_c2_json",
         "texture": "ani_c2_png",
         "x": 810,
-        "y": 118
+        "y": 150
     },
     {
         "name": "banma",
         "data": "ani_c3_json",
         "texture": "ani_c3_png",
         "x": 810,
-        "y": 173
+        "y": 190
     },
     {
         "name": "luotuo",
         "data": "ani_c4_json",
         "texture": "ani_c4_png",
         "x": 810,
-        "y": 227
+        "y": 250
     },
     {
         "name": "tuoniao",
         "data": "ani_c5_json",
         "texture": "ani_c5_png",
         "x": 810,
-        "y": 278
+        "y": 300
     },
     {
         "name": "yezhu",
         "data": "ani_c6_json",
         "texture": "ani_c6_png",
         "x": 810,
-        "y": 391
+        "y": 410
     }
 ]
