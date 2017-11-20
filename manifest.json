@@ -14,6 +14,7 @@
 		"bin-debug/LoadingUI.js",
 		"bin-debug/LoadingView.js",
 		"bin-debug/Main.js",
+		"bin-debug/Role.js",
 		"bin-debug/StartView.js",
 		"bin-debug/ThemeAdapter.js"
 	]

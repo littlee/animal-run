@@ -1,39 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin width="960" height="640" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-    <e:Image source="game_map_png" bottom="0" right="0"/>
-    <e:Image source="game_bet_panel_png" horizontalCenter="0" bottom="0"/>
-    <e:Image source="game_rebet_png" left="7" bottom="68"/>
-    <e:Image source="game_cancel_png" left="7" bottom="6"/>
-    <e:Image source="game_bet_minus_png" bottom="17" right="87"/>
-    <e:Image source="game_bet_plus_png" bottom="17" right="17"/>
+    <e:Image source="game_map_png" bottom="0" right="0" />
+    <e:Image source="game_bet_panel_png" horizontalCenter="0" bottom="0" />
+    <e:Image source="game_rebet_png" left="7" bottom="68" />
+    <e:Image source="game_cancel_png" left="7" bottom="6" />
+    <e:Image source="game_bet_minus_png" bottom="17" right="87" />
+    <e:Image source="game_bet_plus_png" bottom="17" right="17" />
     <e:Image source="game_bet_amount_png" right="19" bottom="90" />
-
-	<e:Group id="roleShiziGroup"></e:Group>
-
-
-    <e:Rect width="100%" height="64" fillColor="0x000000" fillAlpha="0.5"/>
-    <e:Image source="game_lobby_png"  right="10" top="5"/>
-    <e:Image source="game_coin_holder_png" top="4" left="10"/>
-    <e:Image source="game_coin_png" top="4" left="10"/>
-    <e:Label text="123" y="20" x="70"/>
-    
-	<e:Image source="game_c1_png" bottom="-3" left="146"/>
-    <e:Label text="x15" bottom="10" left="178" size="20"/>
-	<e:Image source="game_c2_png" bottom="-3" left="256"/>
-	<e:Label text="x10" bottom="10" left="288" size="20"/>
-	<e:Image source="game_c3_png" bottom="-3" left="366"/>
-	<e:Label text="x6" bottom="10" left="404" size="20"/>
-	<e:Image source="game_c4_png" bottom="-3" left="475"/>
-	<e:Label text="x6" bottom="10" left="513" size="20"/>
-	<e:Image source="game_c5_png" bottom="-3" left="583"/>
-	<e:Label text="x4" bottom="10" left="621" size="20"/>
-	<e:Image source="game_c6_png" bottom="-3" left="691"/>
-	<e:Label text="x4" bottom="10" left="729" size="20"/>
-
-    <e:Image source="game_bet_each_png" bottom="92" left="143"/>
-	<e:Image source="game_bet_each_png" bottom="92" left="253"/>
-	<e:Image source="game_bet_each_png" bottom="92" left="363"/>
-	<e:Image source="game_bet_each_png" bottom="92" left="473"/>
-	<e:Image source="game_bet_each_png" bottom="92" left="583"/>
-	<e:Image source="game_bet_each_png" bottom="92" left="693"/>
+    <e:Rect width="100%" height="64" fillColor="0x000000" fillAlpha="0.5" />
+    <e:Image source="game_lobby_png" right="10" top="5" />
+    <e:Image source="game_coin_holder_png" top="4" left="10" />
+    <e:Image source="game_coin_png" top="4" left="10" />
+    <e:Label id="totalCoin" text="123" y="20" x="70" />
+    <e:Label id="betCoin" text="123" bottom="98" right="44" size="24"/>
+    <e:List id="betBtnList" x="149.34" y="506.17" width="642.66" height="130.67" anchorOffsetX="0" anchorOffsetY="0">
+        <e:itemRendererSkinName>
+            <e:Skin states="default,active" currentState="{data.state}">
+                <e:Group>
+                    <e:Image source="game_bet_each_png" />
+                    <e:Label text="{data.amount}" horizontalCenter="0" y="5" />
+                    <e:Image source="{data.default}" includeIn="default" y="38" horizontalCenter="0" name="{data.index}"/>
+                    <e:Image source="{data.active}" includeIn="active" y="38" horizontalCenter="0" name="{data.index}"/>
+                    <e:Label text="{data.times}" horizontalCenter="0" bottom="15" size="20"  touchEnabled="false"/>
+                </e:Group>
+            </e:Skin>
+        </e:itemRendererSkinName>
+        <e:layout>
+            <e:HorizontalLayout/>
+        </e:layout>
+    </e:List>
 </e:Skin>

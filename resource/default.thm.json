@@ -30,6 +30,7 @@
     "resource/eui_skins/VScrollBarSkin.exml",
     "resource/eui_skins/VSliderSkin.exml",
     "resource/skins/GameView.exml",
+    "resource/skins/ListItem.exml",
     "resource/skins/LoadingView.exml",
     "resource/skins/StartView.exml"
   ]
