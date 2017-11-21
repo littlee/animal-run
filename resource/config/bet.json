@@ -1,0 +1,62 @@
+[
+    {
+        "name": "shizi",
+        "times_text": "x15",
+        "times": 15,
+        "amount": 0,
+        "index": "0",
+        "resource": "game_c1_png",
+        "default": "game_c1_png",
+        "active": "game_c1_active_png"
+    },
+    {
+        "name": "houzi",
+        "times_text": "x10",
+        "times": 10,
+        "amount": 0,
+        "index": "1",
+        "resource": "game_c2_png",
+        "default": "game_c2_png",
+        "active": "game_c2_active_png"
+    },
+    {
+        "name": "banma",
+        "times_text": "x6",
+        "times": 6,
+        "amount": 0,
+        "index": "2",
+        "resource": "game_c3_png",
+        "default": "game_c3_png",
+        "active": "game_c3_active_png"
+    },
+    {
+        "name": "luotuo",
+        "times_text": "x6",
+        "times": 6,
+        "amount": 0,
+        "index": "3",
+        "resource": "game_c4_png",
+        "default": "game_c4_png",
+        "active": "game_c4_active_png"
+    },
+    {
+        "name": "tuoniao",
+        "times_text": "x4",
+        "times": 4,
+        "amount": 0,
+        "index": "4",
+        "resource": "game_c5_png",
+        "default": "game_c5_png",
+        "active": "game_c5_active_png"
+    },
+    {
+        "name": "yezhu",
+        "times_text": "x4",
+        "times": 4,
+        "amount": 0,
+        "index": "5",
+        "resource": "game_c6_png",
+        "default": "game_c6_png",
+        "active": "game_c6_active_png"
+    }
+]

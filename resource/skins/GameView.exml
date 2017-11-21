@@ -1,30 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin width="960" height="640" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
-	<w:Declarations>
-		<tween:TweenGroup id="gameMapTw">
-			<tween:TweenItem target="{gameMap}">
-				<tween:Set/>
-				<tween:To duration="10000">
-					<tween:props>
-						<e:Object x="{0}"/>
-					</tween:props>
-				</tween:To>
-			</tween:TweenItem>
-		</tween:TweenGroup>
-	</w:Declarations>
     <e:Image id="gameMap" source="game_map_png" x="-1920" y="0"/>
     <e:Image id="image" source="game_bet_panel_png" horizontalCenter="0" bottom="0" />
-    <e:Image source="game_rebet_png" left="7" bottom="68" />
-    <e:Image source="game_cancel_png" left="7" bottom="6" />
-    <e:Image source="game_bet_minus_png" bottom="17" right="87" />
-    <e:Image source="game_bet_plus_png" bottom="17" right="17" />
+    <e:Image id="rebetBtn" source="game_rebet_png" left="7" bottom="68" />
+    <e:Image id="betCancelBtn" source="game_cancel_png" left="7" bottom="6" />
+    <e:Image id="betMinusBtn" source="game_bet_minus_png" bottom="17" right="87" />
+    <e:Image id="betPlusBtn" source="game_bet_plus_png" bottom="17" right="17" />
     <e:Image source="game_bet_amount_png" right="19" bottom="90" />
     <e:Rect width="100%" height="64" fillColor="0x000000" fillAlpha="0.5" />
     <e:Image source="game_lobby_png" right="10" top="5" />
     <e:Image source="game_coin_holder_png" top="4" left="10" />
     <e:Image source="game_coin_png" top="4" left="10" />
-    <e:Label id="totalCoin" text="123" y="20" x="70" />
-    <e:Label id="betCoin" text="100" bottom="98" right="44" size="24"/>
+    <e:Label id="totalCoinLabel" text="-" y="20" x="70" />
+    <e:Label id="betCoinLabel" text="-" bottom="98" right="44" size="24"/>
     <e:List id="betBtnList" x="149.34" y="506.17" width="642.66" height="130.67" anchorOffsetX="0" anchorOffsetY="0">
         <e:itemRendererSkinName>
             <e:Skin >
@@ -32,7 +20,7 @@
                     <e:Image source="game_bet_each_png" />
                     <e:Label text="{data.amount}" horizontalCenter="0" y="5" />
                     <e:Image source="{data.resource}" y="38" horizontalCenter="0" name="{data.index}"/>
-                    <e:Label text="{data.times}" horizontalCenter="0" bottom="15" size="20" touchEnabled="false"/>
+                    <e:Label text="{data.times_text}" horizontalCenter="0" bottom="15" size="20" touchEnabled="false"/>
                 </e:Group>
             </e:Skin>
         </e:itemRendererSkinName>
@@ -40,5 +28,7 @@
             <e:HorizontalLayout/>
         </e:layout>
     </e:List>
-    <e:Image id="startBtn" source="game_start_btn_png" horizontalCenter="0" verticalCenter="0" x="0" y="0"/>
+    <e:Image id="startBtn" source="game_start_btn_png" horizontalCenter="0" verticalCenter="0" x="100" y="0" />
+	<e:Rect id="betTopMask" width="100%" height="65" left="0" top="0" anchorOffsetY="0" fillColor="0x000000" fillAlpha="0.5" visible="false"/>
+	<e:Rect id="betPanelMask" width="100%" height="138" left="0" bottom="0" anchorOffsetY="0" fillColor="0x000000" fillAlpha="0.5" visible="false"/>
 </e:Skin>

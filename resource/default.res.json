@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,description_json,loading_bg_jpg,loading_spin_png,start_bg_jpg,start_bottom_bar_png,start_logo_png,start_room_png,game_lobby_png,game_bet_panel_png,game_rebet_png,game_cancel_png,game_bet_minus_png,game_bet_plus_png,game_c1_png,game_c1_active_png,game_c2_active_png,game_c2_png,game_c3_active_png,game_c3_png,game_c4_active_png,game_c4_png,game_c5_active_png,game_c5_png,game_c6_active_png,game_c6_png,game_c2_history_png,game_c5_history_png,game_c3_history_png,game_c4_history_png,game_c6_history_png,game_c1_history_png,game_map_png,game_bet_amount_png,game_coin_png,game_coin_holder_png,game_bet_each_png,role_json,ani_c1_json,ani_c1_png,ani_c2_json,ani_c2_png,ani_c3_json,ani_c3_png,ani_c4_json,ani_c4_png,ani_c5_json,ani_c5_png,ani_c6_json,ani_c6_png,game_start_btn_png",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,description_json,loading_bg_jpg,loading_spin_png,start_bg_jpg,start_bottom_bar_png,start_logo_png,start_room_png,game_lobby_png,game_bet_panel_png,game_rebet_png,game_cancel_png,game_bet_minus_png,game_bet_plus_png,game_c1_png,game_c1_active_png,game_c2_active_png,game_c2_png,game_c3_active_png,game_c3_png,game_c4_active_png,game_c4_png,game_c5_active_png,game_c5_png,game_c6_active_png,game_c6_png,game_c2_history_png,game_c5_history_png,game_c3_history_png,game_c4_history_png,game_c6_history_png,game_c1_history_png,game_map_png,game_bet_amount_png,game_coin_png,game_coin_holder_png,game_bet_each_png,role_json,ani_c1_json,ani_c1_png,ani_c2_json,ani_c2_png,ani_c3_json,ani_c3_png,ani_c4_json,ani_c4_png,ani_c5_json,ani_c5_png,ani_c6_json,ani_c6_png,game_start_btn_png,bet_json",
 			"name": "preload"
 		}
 	],
@@ -370,6 +370,11 @@
 			"name": "game_start_btn_png",
 			"type": "image",
 			"url": "assets/game_start_btn.png"
+		},
+		{
+			"name": "bet_json",
+			"type": "json",
+			"url": "config/bet.json"
 		}
 	]
 }
